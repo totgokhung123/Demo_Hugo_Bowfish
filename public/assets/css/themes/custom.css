@@ -1,0 +1,10 @@
+.code-block::before {
+    content: attr(data-lang);
+    display: block;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }

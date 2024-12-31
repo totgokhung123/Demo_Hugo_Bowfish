@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to Totgo Blog! on Totgokhung</title>
+    <link>https://meatybytes.io/</link>
+    <description>Recent content in Welcome to Totgo Blog! on Totgokhung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>:copyright: 2024 totgo Media All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 12 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://meatybytes.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quản lý và Tối ưu hóa Memory trong JavaScript</title>
+      <link>https://meatybytes.io/posts/javascript/javascriptblog/blog4/</link>
+      <pubDate>Thu, 12 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/javascript/javascriptblog/blog4/</guid>
+      <description>Khi phát triển ứng dụng JavaScript, việc quản lý bộ nhớ đóng vai trò quan trọng trong việc đảm bảo hiệu suất.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/javascript/javascriptblog/blog4/featured-tls.png" />
+    </item>
+    
+    <item>
+      <title>Gửi HTTP Request trong JavaScript: Hướng dẫn toàn diện cho người mới bắt đầu</title>
+      <link>https://meatybytes.io/posts/javascript/javascriptblog/blog2/</link>
+      <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/javascript/javascriptblog/blog2/</guid>
+      <description>Ngày nay, sự tương tác giữa các ứng dụng web dựa trên HTTP.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/javascript/javascriptblog/blog2/featured-tls.png" />
+    </item>
+    
+    <item>
+      <title>JavaScript căn bản</title>
+      <link>https://meatybytes.io/posts/javascript/javascriptblog/blog1/</link>
+      <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/javascript/javascriptblog/blog1/</guid>
+      <description>JavaScript series # Chương đầu tiên này sẽ trình bày về những khái niệm căn bản nhất trong JavaScript.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/javascript/javascriptblog/blog1/featured-ossm.png" />
+    </item>
+    
+    <item>
+      <title>Xây dựng một mạng xã hội đơn giản với JavaScript</title>
+      <link>https://meatybytes.io/posts/javascript/javascriptblog/blog3/</link>
+      <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/javascript/javascriptblog/blog3/</guid>
+      <description>Trong bài đăng trên blog này, chúng tôi sẽ xây dựng một mạng xã hội đơn giản với các tính năng thời gian thực và danh sách tất cả các thành viên đang trực tuyến.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/javascript/javascriptblog/blog3/featured-tls.png" />
+    </item>
+    
+    <item>
+      <title>Các phương thức cắt chuỗi trong Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog3/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog3/</guid>
+      <description>Cách cắt chuỗi trong Java # Cắt chuỗi là thao tác trích xuất một phần cụ thể của chuỗi dựa trên vị trí bắt đầu và (tùy chọn) vị trí kết thúc.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/java/javablog/blog3/featured-java.jpg" />
+    </item>
+    
+    <item>
+      <title>Các tính năng của từ khóa protected trong Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog5/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog5/</guid>
+      <description>Tìm hiểu về tính năng protected trong Java # Tính năng protected trong Java cho phép các thành phần của một lớp được truy cập bởi các lớp con của nó.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/java/javablog/blog5/featured-java.jpg" />
+    </item>
+    
+    <item>
+      <title>Java là gì? Tổng quan về ngôn ngữ lập trình Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog1/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog1/</guid>
+      <description>Java là gì?</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/java/javablog/blog1/featured-java.jpg" />
+    </item>
+    
+    <item>
+      <title>Khai báo phương thức overloading trong Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog2/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog2/</guid>
+      <description>Quá tải (overloading) trong Java là gì?</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/java/javablog/blog2/featured-java.jpg" />
+    </item>
+    
+    <item>
+      <title>Tính đóng gói trong Java: Sử dụng sao cho hiệu quả?</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog4/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog4/</guid>
+      <description>Tính đóng gói trong Java: Sử dụng sao cho hiệu quả?</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/posts/java/javablog/blog4/featured-java.jpg" />
+    </item>
+    
+    <item>
+      <title>Comment Policy</title>
+      <link>https://meatybytes.io/admin/comment-policy/</link>
+      <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/admin/comment-policy/</guid>
+      <description>At MeatyBytes.</description>
+      
+    </item>
+    
+    <item>
+      <title>Site Disclosures</title>
+      <link>https://meatybytes.io/admin/disclosures/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/admin/disclosures/</guid>
+      <description>General Disclosure # MeatyBytes.</description>
+      
+    </item>
+    
+    <item>
+      <title>Profile</title>
+      <link>https://meatybytes.io/profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/profile/</guid>
+      <description> </description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://meatybytes.io/profile/featured-m.png" />
+    </item>
+    
+  </channel>
+</rss>

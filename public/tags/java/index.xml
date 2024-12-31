@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Totgokhung</title>
+    <link>https://meatybytes.io/tags/java/</link>
+    <description>Recent content in Java on Totgokhung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>:copyright: 2024 totgo Media All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 23 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://meatybytes.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Các phương thức cắt chuỗi trong Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog3/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog3/</guid>
+      <description>Cách cắt chuỗi trong Java # Cắt chuỗi là thao tác trích xuất một phần cụ thể của chuỗi dựa trên vị trí bắt đầu và (tùy chọn) vị trí kết thúc.</description>
+    </item>
+    
+    <item>
+      <title>Các tính năng của từ khóa protected trong Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog5/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog5/</guid>
+      <description>Tìm hiểu về tính năng protected trong Java # Tính năng protected trong Java cho phép các thành phần của một lớp được truy cập bởi các lớp con của nó.</description>
+    </item>
+    
+    <item>
+      <title>Java là gì? Tổng quan về ngôn ngữ lập trình Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog1/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog1/</guid>
+      <description>Java là gì?</description>
+    </item>
+    
+    <item>
+      <title>Khai báo phương thức overloading trong Java</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog2/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog2/</guid>
+      <description>Quá tải (overloading) trong Java là gì?</description>
+    </item>
+    
+    <item>
+      <title>Tính đóng gói trong Java: Sử dụng sao cho hiệu quả?</title>
+      <link>https://meatybytes.io/posts/java/javablog/blog4/</link>
+      <pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://meatybytes.io/posts/java/javablog/blog4/</guid>
+      <description>Tính đóng gói trong Java: Sử dụng sao cho hiệu quả?</description>
+    </item>
+    
+  </channel>
+</rss>
