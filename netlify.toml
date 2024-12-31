@@ -4,4 +4,11 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.108.0"
+  HUGO_ENV = "production"
   HUGO_BUILD_EXTENDED = "true"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.108.0" # if older, use format: 0.53 (no trailing zero)
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.108.0"
