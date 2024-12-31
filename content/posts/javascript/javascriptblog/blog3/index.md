@@ -13,7 +13,7 @@ Chúng tôi sẽ sử dụng Node.js làm máy chủ ứng dụng, Vanilla JavaS
 
 Chúng tôi sẽ xây dựng một ứng dụng giống như danh sách bạn bè của bạn hoặc phòng trò chuyện chung, nơi bạn có thể xem ai đang trực tuyến và cập nhật trạng thái mới nhất của họ theo thời gian thực. Trong bài đăng trên blog, chúng ta sẽ tìm hiểu về kênh hiện diện của Pusher và cách biết về các thành viên trực tuyến của kênh này.
 
-![Vanilla](12.gif "")
+![Vanilla](12.png)
 
 Chúng tôi sẽ xây dựng các thành phần sau trong bài đăng trên blog này:
 
@@ -663,7 +663,7 @@ Chúng tôi đã xây dựng một ứng dụng sẽ hiển thị tất cả cá
 
 Thành phần hoặc mã này có thể được sử dụng để phát triển phần mạng xã hội trong hầu hết các ứng dụng web hiện nay. Đây là trường hợp sử dụng quan trọng khi người dùng cần biết về những người tham gia khác có sẵn. Ví dụ: ứng dụng lớp học trực tuyến có thể thấy những người tham gia khác và trạng thái có thể tương ứng với bất kỳ câu hỏi nào mà bất kỳ người tham gia nào muốn hỏi người thuyết trình.
 
-![end](16.gif "")
+![end](16.png)
 <style>
     .max-w-prose {
         max-width: 825px;
