@@ -1,0 +1,37 @@
+languageCode = "en"
+languageName = "English"
+displayName = "EN"
+isoCode = "en"
+weight = 1
+rtl = false
+
+title = "Totgokhung"
+logo = "img/MR_Logo_white_drop_shadow.png"
+# description = "My awesome website"
+copyright = ":copyright: 2024 totgo Media All Rights Reserved"
+
+dateFormat = "2 January 2006"
+
+[author]
+  name = "Chu Tiến Bình"
+  image = "img/chutienbinh.jpg"
+  headline = "Hãy và độc nhất trên con đường chính mình!"
+  bio = "Tốt gỗ hơn tốt nước sơn"
+  links = [
+    { email = "mailto:chutienbinh2003@gmail.com" },
+    { link = "https://distractedhobbyists.com/" },
+#    { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
+    { dev = "https://dev.to/miethe" },
+#     { flickr = "https://www.flickr.com/photos/username/" },
+    { github = "https://github.com/totgokhung123/Demo_Hugo_Bowfish" },
+    { instagram = "https://www.instagram.com/totgokhung123/" },
+#    { keybase = "https://keybase.io/username" },
+    { linkedin = "https://www.linkedin.com/in/chu-ti%E1%BA%BFn-b%C3%ACnh-2357062bb/" },
+    # { mastodon = "https://masto.ai/@miethe" },
+#    { medium = "https://medium.com/username" },
+#    { reddit = "https://reddit.com/user/username" },
+#    { slack = "https://workspace.url/team/userid" },
+#    { twitter = "https://twitter.com/username" },
+#    { youtube = "https://youtube.com/username" },
+  ]
+

@@ -1,0 +1,718 @@
+{{ define "main" }}
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Hugo Blox Builder 0.3.1">
+    <meta name="author" content="吳健雄">
+    <meta name="description"
+        content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.">
+    <link rel="alternate" hreflang="en-us" href="index.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/themes/emerald.min.css">
+    <link href="/assets/dist/wc.min.css" rel="stylesheet">
+    <script>window.hbb = { defaultTheme: document.documentElement.dataset.wcThemeDefault, setDarkTheme: () => { document.documentElement.classList.add("dark"), document.documentElement.style.colorScheme = "dark" }, setLightTheme: () => { document.documentElement.classList.remove("dark"), document.documentElement.style.colorScheme = "light" } }, console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`), "wc-color-theme" in localStorage ? localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme() : (window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme(), window.hbb.defaultTheme === "system" && (window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme()))</script>
+    <script>document.addEventListener("DOMContentLoaded", function () { let e = document.querySelectorAll("li input[type='checkbox'][disabled]"); e.forEach(e => { e.parentElement.parentElement.classList.add("task-list") }); const t = document.querySelectorAll(".task-list li"); t.forEach(e => { let t = Array.from(e.childNodes).filter(e => e.nodeType === 3 && e.textContent.trim().length > 1); if (t.length > 0) { const n = document.createElement("label"); t[0].after(n), n.appendChild(e.querySelector("input[type='checkbox']")), n.appendChild(t[0]) } }) })</script>
+    <link rel="alternate" href="index.xml" type="application/rss+xml" title="Hugo Academic CV Theme">
+    <link rel="canonical" href="index.html">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@GetResearchDev">
+    <meta property="twitter:creator" content="@GetResearchDev">
+    <meta property="og:site_name" content="Hugo Academic CV Theme">
+    <meta property="og:url" content="https://academic-demo.netlify.app/">
+    <meta property="og:title" content="Hugo Academic CV Theme">
+    <meta property="og:description"
+        content="The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.">
+    <meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hu7729264130191091259.png">
+    <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hu7729264130191091259.png">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:updated_time" content="2022-10-24T00:00:00+00:00">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://academic-demo.netlify.app/"}</script>
+    <title>Hugo Academic CV Theme</title>
+    <style>
+        @font-face {
+            font-family: inter var;
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: swap;
+            src: url(dist/font/Inter.var.woff2)format(woff2)
+        }
+    </style>
+    <link type="text/css" rel="stylesheet"
+        href="/assets/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css"
+        integrity="sha256-vnZutBkxehTsdp0hbpd5v+jzc3yA54D0ug2vtXpBpII=">
+    <script
+        src="/assets//assets/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js"
+        integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+    <script>window.hbb.pagefind = { baseUrl: "/" }</script>
+    <style>
+        html.dark {
+            --pagefind-ui-primary: #eeeeee;
+            --pagefind-ui-text: #eeeeee;
+            --pagefind-ui-background: #152028;
+            --pagefind-ui-border: #152028;
+            --pagefind-ui-tag: #152028
+        }
+    </style>
+    <script>window.addEventListener("DOMContentLoaded", e => { new PagefindUI({ element: "#search", showSubResults: !0, baseUrl: window.hbb.pagefind.baseUrl, bundlePath: window.hbb.pagefind.baseUrl + "pagefind/" }) }), document.addEventListener("DOMContentLoaded", () => { let e = document.getElementById("search"), t = document.getElementById("search_toggle"); t && t.addEventListener("click", () => { if (e.classList.toggle("hidden"), e.querySelector("input").value = "", e.querySelector("input").focus(), !e.classList.contains("hidden")) { let t = document.querySelector(".pagefind-ui__search-clear"); t && !t.hasAttribute("listenerOnClick") && (t.setAttribute("listenerOnClick", "true"), t.addEventListener("click", () => { e.classList.toggle("hidden") })) } }) })</script>
+    <script defer=""
+        src="/assets/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+        integrity="sha256-jI6ga9BCD1Bn5S+nJ7n5IwN1cyK6RDF3QVPVmpc16ts="></script>
+    {{ if .Params.showHero }}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Đặt ảnh nền cho body */
+        .hero-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('{{ .Params.heroImage }}');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            /* Đảm bảo ảnh nền nằm dưới các phần tử khác */
+        }
+
+        /* Hiệu ứng mờ */
+        .hero-background::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            /* Màu mờ đen */
+            backdrop-filter: blur(30px);
+            /* Hiệu ứng mờ */
+            z-index: -1;
+            /* Đảm bảo mờ phía sau ảnh nền */
+        }
+
+        .ex {
+            color: rgb(209 213 219);
+        }
+
+        .tech-icons {
+            display: flex;
+            gap: 10px;
+            /* Khoảng cách giữa các icon */
+            list-style: none;
+            /* Loại bỏ bullet points */
+            padding: 0;
+        }
+
+        .tech-icons li {
+            width: 40px;
+            /* Kích thước chuẩn cho mỗi mục */
+            height: 40px;
+            /* Kích thước chuẩn cho mỗi mục */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tech-icons li i {
+            font-size: 32px;
+            /* Đặt kích thước biểu tượng */
+            color: #4a5568;
+            /* Màu biểu tượng (có thể đổi theo ý thích) */
+        }
+
+        .tech-icons li img {
+            max-width: 100%;
+            /* Đảm bảo hình ảnh không vượt quá kích thước của li */
+            max-height: 100%;
+            /* Đảm bảo hình ảnh không bị kéo dài quá mức */
+            object-fit: contain;
+            /* Giữ tỷ lệ hình ảnh */
+            background-color: transparent;
+        }
+        .cardi {
+            display: flex;
+            flex-direction: column; /* Sắp xếp theo chiều dọc */
+            justify-content: flex-start; /* Căn các phần tử khác ở trên */
+            align-items: stretch;
+            position: relative;
+        }
+        
+        .cardi img {
+            margin-top: auto; /* Đẩy ảnh xuống cuối */
+            width: 100%; /* Tùy chỉnh để phù hợp chiều rộng */
+            object-fit: contain; /* Đảm bảo không bị méo ảnh */
+        }
+    </style>
+
+    <!-- Phần nền mờ -->
+    <div class="hero-background"></div>
+    {{ end }}
+</head>
+
+<body>
+
+</body>
+<!-- Profile Section -->
+<!-- Phần nền mờ -->
+
+
+<section id="section-resume-biography-3" class="relative hbb-section blox-resume-biography-3 dark"
+    style="padding:6rem 0; padding-top: 0px">
+    <div class="resume-biography px-3 flex flex-col md:flex-row justify-center gap-12">
+        <div class="flex-none m-w-[130px] mx-auto md:mx-0">
+            <div id="profile" class="flex justify-center items-center flex-col">
+                <div class="avatar-wrapper mt-10">
+                    <img class="avatar rounded-full bg-white dark:bg-gray-800 p-1"
+                        src="/assets/author/totgo/chinhava.jpg" alt="吳健雄" width="150" height="150">
+                    <span class="avatar-emoji">🤖</span>
+                </div>
+                <div class="portrait-title dark:text-white">
+                    <div class="text-3xl font-bold mb-2 mt-6">
+                        <ruby>
+                            <rb>Chu Tiến Bình</rb>
+                        </ruby>
+                    </div>
+                    <h3 class="font-semibold mb-1">Kỹ sư Trí tuệ nhân tạo</h3>
+                    <div class="mb-2">
+                        <a href="https://openai.com/" target="_blank" rel="noopener">
+                            <div>Nickname: Totgo</div>
+                        </a>
+                    </div>
+                    <ul class="network-icon dark:text-zinc-100">
+                        <li><a href="https://github.com/totgokhung123" target="_blank" rel="noopener" aria-label="brands/github"><svg style="height:1.5rem" fill="currentcolor" viewBox="3 3 18 18"><path d="M12 3C7.0275 3 3 7.12937 3 12.2276c0 4.0833 2.57625 7.5321 6.15374 8.7548C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441 9.77249 20.3249 9.76125 19.5982 9.76125 18.8254 7.5 19.2522 6.915 18.2602 6.735 17.7412 6.63375 17.4759 6.19499 16.6569 5.8125 16.4378 5.4975 16.2647 5.0475 15.838 5.80124 15.8264 6.51 15.8149 7.01625 16.4954 7.18499 16.7723 7.99499 18.1679 9.28875 17.7758 9.80625 17.5335 9.885 16.9337 10.1212 16.53 10.38 16.2993 8.3775 16.0687 6.285 15.2728 6.285 11.7432c0-1.0035.34875-1.834.92249-2.47994C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794c0 0 .753749999999999-.24223 2.47499.94583.72001-.20762 1.48501-.31143 2.25001-.31143C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377c1.7212-1.19959 2.475-.94583 2.475-.94583C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326 17.4113 9.9092 17.76 10.7281 17.76 11.7432c0 3.5411-2.1037 4.3255-4.1063 4.5561C13.98 16.5877 14.2613 17.1414 14.2613 18.0065 14.2613 19.2407 14.25 20.2326 14.25 20.5441 14.25 20.7863 14.4188 21.0746 14.8688 20.9824 16.6554 20.364 18.2079 19.1866 19.3078 17.6162c1.0999-1.5705 1.6917-3.4551 1.6922-5.3886C21 7.12937 16.9725 3 12 3z"></path></svg></a></li>
+                        <li><a href="https://www.linkedin.com/in/chu-tiến-bình-2357062bb/" target="_blank" rel="noopener" aria-label="brands/linkedin"><svg style="height:1.5rem" height="1em" viewBox="0 0 448 512"><path fill="currentcolor" d="M416 32H31.9C14.3 32 0 46.5.0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6.0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3.0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2.0 38.5 17.3 38.5 38.5.0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6.0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2.0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="brands/instagram"><svg style="height:1.5rem" viewBox="0 0 15 15"><path fill="currentcolor" fill-rule="evenodd" d="M12.91 12.909c.326-.327.582-.72.749-1.151.16-.414.27-.886.302-1.578.032-.693.04-.915.04-2.68.0-1.765-.008-1.987-.04-2.68-.032-.692-.142-1.164-.302-1.578a3.185 3.185.0 00-.75-1.151 3.187 3.187.0 00-1.151-.75c-.414-.16-.886-.27-1.578-.302C9.487 1.007 9.265 1 7.5 1c-1.765.0-1.987.007-2.68.04-.692.03-1.164.14-1.578.301a3.2 3.2.0 00-1.151.75 3.2 3.2.0 00-.75 1.151c-.16.414-.27.886-.302 1.578C1.007 5.513 1 5.735 1 7.5s.007 1.987.04 2.68c.03.692.14 1.164.301 1.578.164.434.42.826.75 1.151.325.33.718.586 1.151.75.414.16.886.27 1.578.302.693.031.915.039 2.68.039s1.987-.008 2.68-.04c.692-.03 1.164-.14 1.578-.301a3.323 3.323.0 001.151-.75zM2 6.735v1.53c-.002.821-.002 1.034.02 1.5.026.586.058 1.016.156 1.34.094.312.199.63.543 1.012.344.383.675.556 1.097.684.423.127.954.154 1.415.175.522.024.73.024 1.826.024H8.24c.842.001 1.054.002 1.526-.02.585-.027 1.015-.059 1.34-.156.311-.094.629-.2 1.011-.543.383-.344.556-.676.684-1.098.127-.422.155-.953.176-1.414C13 9.247 13 9.04 13 7.947v-.89c0-1.096.0-1.303-.023-1.826-.021-.461-.049-.992-.176-1.414-.127-.423-.3-.754-.684-1.098-.383-.344-.7-.449-1.011-.543-.325-.097-.755-.13-1.34-.156A27.29 27.29.0 008.24 2H7.057c-1.096.0-1.304.0-1.826.023-.461.021-.992.049-1.415.176-.422.128-.753.301-1.097.684s-.45.7-.543 1.012c-.098.324-.13.754-.156 1.34-.022.466-.022.679-.02 1.5zM7.5 5.25a2.25 2.25.0 100 4.5 2.25 2.25.0 000-4.5zM4.25 7.5a3.25 3.25.0 116.5.0 3.25 3.25.0 01-6.5.0zm6.72-2.72a.75.75.0 100-1.5.75.75.0 000 1.5z" clip-rule="evenodd"></path></svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flex-auto max-w-prose md:mt-12">
+            <!-- Nội dung khác vẫn giữ nguyên -->
+            <div class="pt-2 justify-content-center prose prose-slate dark:prose-invert">
+                <div class="bio-text">
+                    <h2 id="about-me">Thông tin cá nhân</h2>
+                    <p>Tôi là Chu Tiến Bình, hiện đang là sinh viên năm 4 trường Đại Học
+                        Công Nghệ TP.HCM. Là sinh viên ngành Công Nghệ Thông Tin chuyên ngành
+                        Trí Tuệ Nhân Tạo, tôi đang không ngừng nâng cao kiến thức và kỹ năng để
+                        trở thành một kỹ sư AI chuyên nghiệp. Thành thạo 4 ngôn ngữ python, java, C#, JavaScript.
+                        Tôi hi vọng blog của tôi sẽ truyền tải được những kiến thức, kinh nghiệm, và cảm hứng của tôi
+                        đến với mọi người.
+                    </p>
+                </div>
+            </div><a href="/assets/uploads/CV.pdf" target="_blank"
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-primary-700 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
+                    class="w-3.5 h-3.5 me-2.5" aria-hidden="true" fill="currentcolor" viewBox="0 0 20 20">
+                    <path
+                        d="M14.707 7.793a1 1 0 00-1.414.0L11 10.086V1.5a1 1 0 00-2 0v8.586L6.707 7.793A1 1 0 105.293 9.207l4 4a1 1 0 001.416.0l4-4a1 1 0 00-.002-1.414z">
+                    </path>
+                    <path
+                        d="M18 12h-2.55l-2.975 2.975a3.5 3.5.0 01-4.95.0L4.55 12H2a2 2 0 00-2 2v4a2 2 0 002 2h16a2 2 0 002-2v-4a2 2 0 00-2-2zm-3 5a1 1 0 110-2 1 1 0 010 2z">
+                    </path>
+                </svg> Download CV</a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between mt-6 dark:text-gray-300">
+                <div>
+                    <div class="section-subheading mb-3 " style="color: white;">Sở thích nghiên cứu</div>
+                    <ul class="list-disc list-inside space-y-1 pl-5">
+                        <li>Học sâu, học đa phương thức</li>
+                        <li>Ngôn ngữ xử lý tự nhiên</li>
+                        <li>Máy tính lượng tử</li>
+                        <li>Điện toán đám mây</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="section-subheading mb-3 " style="color: white;">Học vấn</div>
+                    <ul>
+                        <li class="flex items-start gap-3"><svg style="" class="flex-shrink-0 w-5 h-5 me-2 mt-1"
+                                viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    d="M4.26 10.147a60.436 60.436.0 00-.491 6.347A48.627 48.627.0 0112 20.904a48.627 48.627.0 018.232-4.41 60.46 60.46.0 00-.491-6.347m-15.482.0a50.57 50.57.0 00-2.658-.813A59.905 59.905.0 0112 3.493a59.902 59.902.0 0110.399 5.84 51.39 51.39.0 00-2.658.814m-15.482.0A50.697 50.697.0 0112 13.489a50.702 50.702.0 017.74-3.342M6.75 15a.75.75.0 100-1.5.75.75.0 000 1.5m0 0v-3.675A55.378 55.378.0 0112 8.443m-7.007 11.55A5.981 5.981.0 006.75 15.75v-1.5">
+                                </path>
+                            </svg>
+                            <div class="description">
+                                <p class="course">Sinh viên</p>
+                                <p class="text-sm">THPT Hà Huy Tập</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3"><svg style="" class="flex-shrink-0 w-5 h-5 me-2 mt-1"
+                                viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5"
+                                    d="M4.26 10.147a60.436 60.436.0 00-.491 6.347A48.627 48.627.0 0112 20.904a48.627 48.627.0 018.232-4.41 60.46 60.46.0 00-.491-6.347m-15.482.0a50.57 50.57.0 00-2.658-.813A59.905 59.905.0 0112 3.493a59.902 59.902.0 0110.399 5.84 51.39 51.39.0 00-2.658.814m-15.482.0A50.697 50.697.0 0112 13.489a50.702 50.702.0 017.74-3.342M6.75 15a.75.75.0 100-1.5.75.75.0 000 1.5m0 0v-3.675A55.378 55.378.0 0112 8.443m-7.007 11.55A5.981 5.981.0 006.75 15.75v-1.5">
+                                </path>
+                            </svg>
+                            <div class="description">
+                                <p class="course">Sinh viên</p>
+                                <p class="text-sm">Ngành: Công nghệ thông tin - Trí tuệ nhân tạo</p>
+                                <p class="text-sm">Đại Học Công Nghệ TP.HCM</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section-markdown" class="relative hbb-section blox-markdown" style="padding-top: 0px;padding-bottom:0px">
+    <div class="home-section-bg"></div>
+    <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+        <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white" style="color:white">📚 Kinh Nghiệm và dự án
+        </div>
+        <section id="section-resume-experience" class="relative hbb-section blox-resume-experience"
+            style="padding-top: 0px">
+            <div class="home-section-bg"></div>
+            <div class="flex flex-col items-center max-w-prose mx-auto">
+                <div class="flex flex-col lg:gap-x-6 w-100 px-6 sm:px-0">
+                    <div class="w-full">
+                        <ol class="relative border-s border-gray-200 dark:border-gray-700">
+                            <li class="mb-10 ms-6"><span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"><svg
+                                        fill="currentcolor" viewBox="0 0 256 256"
+                                        class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                                        <path
+                                            d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z">
+                                        </path>
+                                    </svg></span>
+                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap"
+                                    style="color:white">
+                                    Truy vấn sự kiện trong video bằng cách học các mô hình trực quan có thể chuyển đổi
+                                    từ giám sát ngôn ngữ tự nhiên</h3><span
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">Số
+                                    lượng người tham gia: 2</span>
+                                <time style="margin-top:12px"
+                                    class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">17/10/2024
+                                    –
+                                    24/12/2024</time>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Vị Trí: Trưởng Nhóm</p>
+                                    <ul>
+                                        <li>Nguyên cứu tài liệu thuật toán, mô tả mô hình công việc, code ứng dụng,
+                                            thiết kế dữ liệu , mô hình và các chức năng của dự án</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Công nghệ sử dụng:</p>
+                                    <ul class="tech-icons">
+                                        <li><i class="fa-brands fa-python" style="color: #FFD43B;"></i></li>
+                                        <li><img src="/assets/img/mongo.png" alt="mongoDB"></li>
+                                        <li><i class="fa-brands fa-js" style="color: #FFD43B;"></i></li>
+                                        <li><i class="fa-brands fa-html5" style="color: #cf3907;"></i></li>
+                                        <li><i class="fa-brands fa-css3" style="color: #13397c;"></i></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-10 ms-6"><span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"><svg
+                                        fill="currentcolor" viewBox="0 0 256 256"
+                                        class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                                        <path
+                                            d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z">
+                                        </path>
+                                    </svg></span>
+                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap"
+                                    style="color:white">
+                                    Nghiên cứu SRTP/MIKEY trong dịch vụ VoIP</h3><span
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">Số
+                                    lượng người tham gia: 2</span>
+                                <time style="margin-top:12px"
+                                    class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">10/6/2024
+                                    –
+                                    23/6/2024</time>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Vị Trí: Trưởng Nhóm</p>
+                                    <ul>
+                                        <li>Nguyên cứu tài liệu, ứng dụng phân tích gói tin dữ liệu trong giao thức
+                                            truyền tải an toàn thời gian thực và giao thức quản lý khóa</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Công nghệ sử dụng:</p>
+                                    <ul class="tech-icons">
+                                        <li><img src="/assets/img/wire.png" alt="wireshark"></li>
+                                        <li><img src="/assets/img/ubuntu.svg" alt="unbuntu"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-10 ms-6"><span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"><svg
+                                        fill="currentcolor" viewBox="0 0 256 256"
+                                        class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                                        <path
+                                            d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z">
+                                        </path>
+                                    </svg></span>
+                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap"
+                                    style="color:white">
+                                    Website bán đồ công nghệ với Spring Boot</h3><span
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">Số
+                                    lượng người tham gia: 4</span>
+                                <time style="margin-top:12px"
+                                    class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">07/06/2024
+                                    –
+                                    21/06/2024</time>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Vị Trí: Trưởng Nhóm</p>
+                                    <ul>
+                                        <li>Nguyên cứu tài liệu,mô tả công việc, thiết kế dữ liệu, code backend và
+                                            frontend Website </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Công nghệ sử dụng:</p>
+                                    <ul class="tech-icons">
+                                        <li><img src="/assets/img/spring_boot_icon.png" alt="Spring Framework"></li>
+                                        <li><img src="/assets/img/laragon.webp" alt="mongoDB"></li>
+                                        <li><i class="fa-brands fa-java" style="color: #74C0FC;"></i></li>
+                                        <li><i class="fa-brands fa-js" style="color: #FFD43B;"></i></li>
+                                        <li><i class="fa-brands fa-html5" style="color: #cf3907;"></i></li>
+                                        <li><i class="fa-brands fa-css3" style="color: #13397c;"></i></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-10 ms-6"><span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"><svg
+                                        fill="currentcolor" viewBox="0 0 256 256"
+                                        class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                                        <path
+                                            d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z">
+                                        </path>
+                                    </svg></span>
+                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap"
+                                    style="color:white">
+                                    Ứng dụng máy học vào nhận dạng công thức toán học (OCR)</h3><span
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">Số
+                                    lượng người tham gia: 2</span>
+                                <time style="margin-top:12px"
+                                    class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">18/3/2024
+                                    –
+                                    26/5/2024</time>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Vị Trí: Trưởng Nhóm</p>
+                                    <ul>
+                                        <li>Nguyên cứu tài liệu thuật toán, mô tả mô hình công việc, code ứng dụng,
+                                            thiết kế mô hình mạng nơ ron tích chập, tạo bộ dataset huấn luyện cho mô
+                                            hình phù hợp trong các ký tự toán học</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Công nghệ sử dụng:</p>
+                                    <ul class="tech-icons">
+                                        <li><img src="/assets/img/tensorflow.png" alt="TensorFlow"></li>
+                                        <li><i class="fa-brands fa-python" style="color: #FFD43B;"></i></li>
+                                        <li><i class="fa-brands fa-js" style="color: #FFD43B;"></i></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-10 ms-6"><span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"><svg
+                                        fill="currentcolor" viewBox="0 0 256 256"
+                                        class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                                        <path
+                                            d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z">
+                                        </path>
+                                    </svg></span>
+                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap"
+                                    style="color:white">
+                                    Website tìm iếm việc làm với ASP.NET</h3><span
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">Số
+                                    lượng người tham gia: 5</span>
+                                <time style="margin-top:12px"
+                                    class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">03/2024
+                                    –
+                                    04/2024</time>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Vị Trí: Trưởng Nhóm</p>
+                                    <ul>
+                                        <li>Nguyên cứu tài liệu, mô tả mô hình công việc, code website, thiết kế dữ liệu
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Công nghệ sử dụng:</p>
+                                    <ul class="tech-icons">
+                                        <li><img src="/assets/img/C1.png" alt="C#"></li>
+                                        <li><img src="/assets/img/asp.png" alt="asp.net"></li>
+                                        <li><img src="/assets/img/sqlms.png" alt="sql"></li>
+                                        <li><i class="fa-brands fa-js" style="color: #FFD43B;"></i></li>
+                                        <li><i class="fa-brands fa-html5" style="color: #cf3907;"></i></li>
+                                        <li><i class="fa-brands fa-css3" style="color: #13397c;"></i></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-10 ms-6"><span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"><svg
+                                        fill="currentcolor" viewBox="0 0 256 256"
+                                        class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                                        <path
+                                            d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z">
+                                        </path>
+                                    </svg></span>
+                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap"
+                                    style="color:white">
+                                    Phần mềm nhận diện khuôn mặt bằng ADABOOST</h3><span
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">Số
+                                    lượng người tham gia: 3</span>
+                                <time style="margin-top:12px"
+                                    class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">12/2023
+                                    –
+                                    01/2024</time>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Vị Trí: Trưởng Nhóm</p>
+                                    <ul>
+                                        <li>Nguyên cứu tài liệu, mô tả mô hình công việc, code ứng dụng, thiết kế dữ
+                                            liệu , mô hình và các chức năng của dự án</li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Công nghệ sử dụng:</p>
+                                    <ul class="tech-icons">
+                                        <li><i class="fa-brands fa-python" style="color: #FFD43B;"></i></li>
+                                        <li><img src="/assets/img/opencv.png" alt="OpenCV"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mb-10 ms-6"><span
+                                    class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"><svg
+                                        fill="currentcolor" viewBox="0 0 256 256"
+                                        class="w-5 h-5 text-primary-800 dark:text-primary-300">
+                                        <path
+                                            d="M216 56H176V48a24 24 0 00-24-24H104A24 24 0 0080 48v8H40A16 16 0 0024 72V2e2a16 16 0 0016 16H216a16 16 0 0016-16V72A16 16 0 00216 56zM96 48a8 8 0 018-8h48a8 8 0 018 8v8H96zM216 72v41.61A184 184 0 01128 136a184.07 184.07.0 01-88-22.38V72zm0 128H40V131.64A200.19 200.19.0 00128 152a200.25 200.25.0 0088-20.37V2e2zM104 112a8 8 0 018-8h32a8 8 0 010 16H112a8 8 0 01-8-8z">
+                                        </path>
+                                    </svg></span>
+                                <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white text-wrap"
+                                    style="color:white">
+                                    Phần mềm Quản Lý Tour Du Lịch</h3><span
+                                    class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">Số
+                                    lượng người tham gia: 4</span>
+                                <time style="margin-top:12px"
+                                    class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300 ex">10/2023
+                                    –
+                                    11/2023</time>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Vị Trí: Trưởng Nhóm</p>
+                                    <ul>
+                                        <li>Nguyên cứu tài liệu, mô tả mô hình công việc, code phần mềm, thiết kế dữ
+                                            liệu </li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300 text-wrap prose prose-slate dark:prose-invert ex">
+                                    <p>Công nghệ sử dụng:</p>
+                                    <ul class="tech-icons">
+
+                                        <li><img src="/assets/img/C1.png" alt="C#"></li>
+                                        <li><img src="/assets/img/net.png" alt=".NET"></li>
+                                        <li><img src="/assets/img/sqlms.png" alt="sql"></li>
+                                        <li><img src="/assets/img/advan.jpg" alt="andvanced installed"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<section id="section-resume-awards" class="relative hbb-section blox-resume-awards" style="padding:5rem 0;padding-top:0px">
+    <div class="home-section-bg"></div>
+    <div class="flex flex-col items-center  mx-auto gap-3 justify-center" style="margin-left: 0px; margin-right:0px">
+        <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white" style="color: white;">🏆 Chứng Chỉ</div>
+        <div class="w-full flex flex-row gap-6">
+            <div
+                class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+                    <svg style="height:100%" fill="none"
+                        viewBox="0 0 600 600">
+                        <path d="m307.031 292.969h-14.062v14.062h14.062z" fill="#fff"></path>
+                        <path d="m6e2.0H0v6e2h6e2z" fill="#fff"></path>
+                        <path d="m6e2.0H0v6e2h6e2z" fill="#0056d2"></path>
+                        <g fill="#fff">
+                            <path
+                                d="m117.913 300.434c0-19.301 15.923-34.875 35.859-34.875 20.07.0 35.992 15.574 35.992 34.875.0 19.167-15.922 35.007-35.992 35.007-19.936.0-35.859-15.973-35.859-35.007zm54.725.0c0-9.583-8.43-18.104-18.866-18.104-10.303.0-18.598 8.521-18.598 18.104.0 9.717 8.429 18.236 18.598 18.236 10.436.0 18.866-8.519 18.866-18.236z">
+                            </path>
+                            <path
+                                d="m478.15 300.965c0-21.164 17.326-35.406 33.036-35.406 10.747.0 16.924 3.194 21.086 9.452l1.612-8.253H550v67.353h-16.116l-2.015-6.923c-4.701 5.059-10.61 8.253-20.546 8.253-15.713.0-33.173-13.577-33.173-34.476zm54.795-.133c0-10.247-8.463-18.502-18.936-18.502-10.341.0-18.668 8.388-18.668 18.771.0 9.316 8.461 17.702 18.668 17.702 10.607-.133 18.936-8.519 18.936-17.971z">
+                            </path>
+                            <path
+                                d="m458.833 274.982v-7.721h-17.101v66.211h17.101v-35.724c0-10.729 5.221-16.356 14.487-16.356.652.0 1.176.0 1.697.131l3.133-15.964c-8.875.131-15.272 3.14-19.317 9.423z">
+                            </path>
+                            <path
+                                d="m284.158 274.982v-7.721h-17.623l.135 66.211h17.625l-.137-35.724c0-10.729 5.382-16.356 14.801-16.356.672.0 1.209.0 1.75.131l3.228-15.964c-9.15.131-15.741 3.14-19.779 9.423z">
+                            </path>
+                            <path
+                                d="m196.654 307.776v-41.233h17.209v39.104c0 8.645 4.73 13.699 13.006 13.699 9.196.0 14.583-5.718 14.583-16.624v-36.179h17.209v67.3h-17.209v-7.845c-4.073 6.383-10.641 9.442-19.706 9.442-15.502.133-25.092-11.172-25.092-27.664z">
+                            </path>
+                            <path
+                                d="m365.945 300.369c0-18.867 13.621-34.942 34.985-34.809 19.893.0 33.913 15.942 33.913 34.541.0 1.861-.134 3.854-.401 5.582l-51.405-.133c2.004 8.104 8.678 13.816 18.693 13.949 6.141.0 12.685-2.259 16.69-7.308l11.885 9.567c-6.144 8.634-16.959 13.683-28.441 13.683-20.297-.265-35.919-15.411-35.919-35.072zm51.408-6.909c-.937-6.777-8.145-12.091-16.423-12.091-8.145.0-14.689 4.783-17.226 11.958z">
+                            </path>
+                            <path
+                                d="m303.937 319.559 15.522-8.073c2.542 5.558 7.76 8.734 14.984 8.734 6.691.0 9.234-2.118 9.234-5.029.0-10.721-36.93-4.234-36.93-28.853.0-13.631 12.043-20.779 26.894-20.779 11.239.0 21.274 4.897 26.76 14.163l-15.388 8.073c-2.272-4.5-6.555-7.015-12.041-7.015-5.352.0-7.894 1.854-7.894 4.897.0 10.456 36.93 3.837 36.93 28.853.0 12.97-10.704 20.911-27.966 20.911-14.717-.132-25.02-4.897-30.105-15.882z">
+                            </path>
+                            <path
+                                d="m50 300.074c0-19.161 15.7897-34.515 35.5599-34.515 12.7377.0 23.7511 6.301 30.1201 15.747l-14.861 8.532c-3.4503-4.724-8.8902-7.873-15.2591-7.873-10.2169.0-18.4434 8.398-18.4434 17.978.0 9.578 8.359 17.976 18.4434 17.976 6.6342.0 12.4724-3.411 15.6571-8.529l14.728 8.66c-6.236 9.843-17.5148 16.406-30.3851 16.406C65.7897 334.587 50 318.84 50 300.074z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <a href="https://www.netacad.com/courses/networking-basics?courseLang=en-US" target="_blank"
+                    rel="noopener">
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Networking Basics Cisco</h5>
+                </a>
+                <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">09/28/2024</div>
+                <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Khóa học "Network Basic" của Cisco đã mang lại cho tôi một nền tảng vững chắc về mạng máy tính. 
+                    Tôi hiểu rõ hơn về các khái niệm cơ bản như mô hình OSI, IP, subnetting và cách các thiết bị mạng như 
+                    router và switch hoạt động. Ngoài ra, việc thực hành cấu hình thiết bị trong môi trường mô phỏng thực tế giúp 
+                    tôi tự tin hơn trong việc áp dụng kiến thức vào thực tiễn. Khóa học giúp tôi truyền cảm hứng để tôi tiếp tục khám phá sâu hơn về lĩnh vực mạng và an ninh mạng.</div>
+                <img src="/assets/img/networkbasic.png" alt="network basic">
+                <a href="https://www.credly.com/badges/987f1f9a-f239-434a-b1a7-c3ddebce65c1" target="_blank"
+                rel="noopener"
+                class="inline-flex items-center text-primary-600 dark:text-primary-300 hover:underline">See
+                certificate
+                <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" fill="none"
+                    viewBox="0 0 18 18">
+                    <path stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11v4.833A1.166 1.166.0 0113.833 17H2.167A1.167 1.167.0 011 15.833V4.167A1.166 1.166.0 012.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778">
+                    </path>
+                </svg></a>
+            </div>
+            <div
+                class="cardi w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+                    <svg style="height:100%" fill="none"
+                        viewBox="0 0 600 600">
+                        <path d="m307.031 292.969h-14.062v14.062h14.062z" fill="#fff"></path>
+                        <path d="m6e2.0H0v6e2h6e2z" fill="#fff"></path>
+                        <path d="m6e2.0H0v6e2h6e2z" fill="#0056d2"></path>
+                        <g fill="#fff">
+                            <path
+                                d="m117.913 300.434c0-19.301 15.923-34.875 35.859-34.875 20.07.0 35.992 15.574 35.992 34.875.0 19.167-15.922 35.007-35.992 35.007-19.936.0-35.859-15.973-35.859-35.007zm54.725.0c0-9.583-8.43-18.104-18.866-18.104-10.303.0-18.598 8.521-18.598 18.104.0 9.717 8.429 18.236 18.598 18.236 10.436.0 18.866-8.519 18.866-18.236z">
+                            </path>
+                            <path
+                                d="m478.15 300.965c0-21.164 17.326-35.406 33.036-35.406 10.747.0 16.924 3.194 21.086 9.452l1.612-8.253H550v67.353h-16.116l-2.015-6.923c-4.701 5.059-10.61 8.253-20.546 8.253-15.713.0-33.173-13.577-33.173-34.476zm54.795-.133c0-10.247-8.463-18.502-18.936-18.502-10.341.0-18.668 8.388-18.668 18.771.0 9.316 8.461 17.702 18.668 17.702 10.607-.133 18.936-8.519 18.936-17.971z">
+                            </path>
+                            <path
+                                d="m458.833 274.982v-7.721h-17.101v66.211h17.101v-35.724c0-10.729 5.221-16.356 14.487-16.356.652.0 1.176.0 1.697.131l3.133-15.964c-8.875.131-15.272 3.14-19.317 9.423z">
+                            </path>
+                            <path
+                                d="m284.158 274.982v-7.721h-17.623l.135 66.211h17.625l-.137-35.724c0-10.729 5.382-16.356 14.801-16.356.672.0 1.209.0 1.75.131l3.228-15.964c-9.15.131-15.741 3.14-19.779 9.423z">
+                            </path>
+                            <path
+                                d="m196.654 307.776v-41.233h17.209v39.104c0 8.645 4.73 13.699 13.006 13.699 9.196.0 14.583-5.718 14.583-16.624v-36.179h17.209v67.3h-17.209v-7.845c-4.073 6.383-10.641 9.442-19.706 9.442-15.502.133-25.092-11.172-25.092-27.664z">
+                            </path>
+                            <path
+                                d="m365.945 300.369c0-18.867 13.621-34.942 34.985-34.809 19.893.0 33.913 15.942 33.913 34.541.0 1.861-.134 3.854-.401 5.582l-51.405-.133c2.004 8.104 8.678 13.816 18.693 13.949 6.141.0 12.685-2.259 16.69-7.308l11.885 9.567c-6.144 8.634-16.959 13.683-28.441 13.683-20.297-.265-35.919-15.411-35.919-35.072zm51.408-6.909c-.937-6.777-8.145-12.091-16.423-12.091-8.145.0-14.689 4.783-17.226 11.958z">
+                            </path>
+                            <path
+                                d="m303.937 319.559 15.522-8.073c2.542 5.558 7.76 8.734 14.984 8.734 6.691.0 9.234-2.118 9.234-5.029.0-10.721-36.93-4.234-36.93-28.853.0-13.631 12.043-20.779 26.894-20.779 11.239.0 21.274 4.897 26.76 14.163l-15.388 8.073c-2.272-4.5-6.555-7.015-12.041-7.015-5.352.0-7.894 1.854-7.894 4.897.0 10.456 36.93 3.837 36.93 28.853.0 12.97-10.704 20.911-27.966 20.911-14.717-.132-25.02-4.897-30.105-15.882z">
+                            </path>
+                            <path
+                                d="m50 300.074c0-19.161 15.7897-34.515 35.5599-34.515 12.7377.0 23.7511 6.301 30.1201 15.747l-14.861 8.532c-3.4503-4.724-8.8902-7.873-15.2591-7.873-10.2169.0-18.4434 8.398-18.4434 17.978.0 9.578 8.359 17.976 18.4434 17.976 6.6342.0 12.4724-3.411 15.6571-8.529l14.728 8.66c-6.236 9.843-17.5148 16.406-30.3851 16.406C65.7897 334.587 50 318.84 50 300.074z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <a
+                    href="https://www.netacad.com/courses/javascript-essentials-1"
+                    target="_blank" rel="noopener">
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">JavaScript Essentials 1</h5>
+                </a>
+                <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">12/11/2024</div>
+                <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Khóa học đã giúp tôi nắm vững các kiến thức cơ bản về JavaScript, 
+                    từ cú pháp, biến, hàm đến cách làm việc với DOM. Tôi cảm thấy tự tin hơn trong việc viết mã và xây dựng 
+                    các ứng dụng web tương tác. Đây là bước đệm tuyệt vời để tôi tiếp tục khám phá sâu hơn về lập trình JavaScript.</div>
+                <img src="/assets/img/javascript1.png" alt="java1">
+                <a href="https://www.credly.com/badges/a1f3da8c-5dbb-43ae-988b-ebdbd7fb72a9" target="_blank"
+                rel="noopener"
+                class="inline-flex items-center text-primary-600 dark:text-primary-300 hover:underline">See
+                certificate
+                <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" fill="none"
+                    viewBox="0 0 18 18">
+                    <path stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11v4.833A1.166 1.166.0 0113.833 17H2.167A1.167 1.167.0 011 15.833V4.167A1.166 1.166.0 012.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778">
+                    </path>
+                </svg></a>
+            </div>
+            <div
+                class="cardi w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3">
+                    <svg style="height:100%" fill="none"
+                    viewBox="0 0 600 600">
+                        <path d="m307.031 292.969h-14.062v14.062h14.062z" fill="#fff"></path>
+                        <path d="m6e2.0H0v6e2h6e2z" fill="#fff"></path>
+                        <path d="m6e2.0H0v6e2h6e2z" fill="#0056d2"></path>
+                        <g fill="#fff">
+                            <path
+                                d="m117.913 300.434c0-19.301 15.923-34.875 35.859-34.875 20.07.0 35.992 15.574 35.992 34.875.0 19.167-15.922 35.007-35.992 35.007-19.936.0-35.859-15.973-35.859-35.007zm54.725.0c0-9.583-8.43-18.104-18.866-18.104-10.303.0-18.598 8.521-18.598 18.104.0 9.717 8.429 18.236 18.598 18.236 10.436.0 18.866-8.519 18.866-18.236z">
+                            </path>
+                            <path
+                                d="m478.15 300.965c0-21.164 17.326-35.406 33.036-35.406 10.747.0 16.924 3.194 21.086 9.452l1.612-8.253H550v67.353h-16.116l-2.015-6.923c-4.701 5.059-10.61 8.253-20.546 8.253-15.713.0-33.173-13.577-33.173-34.476zm54.795-.133c0-10.247-8.463-18.502-18.936-18.502-10.341.0-18.668 8.388-18.668 18.771.0 9.316 8.461 17.702 18.668 17.702 10.607-.133 18.936-8.519 18.936-17.971z">
+                            </path>
+                            <path
+                                d="m458.833 274.982v-7.721h-17.101v66.211h17.101v-35.724c0-10.729 5.221-16.356 14.487-16.356.652.0 1.176.0 1.697.131l3.133-15.964c-8.875.131-15.272 3.14-19.317 9.423z">
+                            </path>
+                            <path
+                                d="m284.158 274.982v-7.721h-17.623l.135 66.211h17.625l-.137-35.724c0-10.729 5.382-16.356 14.801-16.356.672.0 1.209.0 1.75.131l3.228-15.964c-9.15.131-15.741 3.14-19.779 9.423z">
+                            </path>
+                            <path
+                                d="m196.654 307.776v-41.233h17.209v39.104c0 8.645 4.73 13.699 13.006 13.699 9.196.0 14.583-5.718 14.583-16.624v-36.179h17.209v67.3h-17.209v-7.845c-4.073 6.383-10.641 9.442-19.706 9.442-15.502.133-25.092-11.172-25.092-27.664z">
+                            </path>
+                            <path
+                                d="m365.945 300.369c0-18.867 13.621-34.942 34.985-34.809 19.893.0 33.913 15.942 33.913 34.541.0 1.861-.134 3.854-.401 5.582l-51.405-.133c2.004 8.104 8.678 13.816 18.693 13.949 6.141.0 12.685-2.259 16.69-7.308l11.885 9.567c-6.144 8.634-16.959 13.683-28.441 13.683-20.297-.265-35.919-15.411-35.919-35.072zm51.408-6.909c-.937-6.777-8.145-12.091-16.423-12.091-8.145.0-14.689 4.783-17.226 11.958z">
+                            </path>
+                            <path
+                                d="m303.937 319.559 15.522-8.073c2.542 5.558 7.76 8.734 14.984 8.734 6.691.0 9.234-2.118 9.234-5.029.0-10.721-36.93-4.234-36.93-28.853.0-13.631 12.043-20.779 26.894-20.779 11.239.0 21.274 4.897 26.76 14.163l-15.388 8.073c-2.272-4.5-6.555-7.015-12.041-7.015-5.352.0-7.894 1.854-7.894 4.897.0 10.456 36.93 3.837 36.93 28.853.0 12.97-10.704 20.911-27.966 20.911-14.717-.132-25.02-4.897-30.105-15.882z">
+                            </path>
+                            <path
+                                d="m50 300.074c0-19.161 15.7897-34.515 35.5599-34.515 12.7377.0 23.7511 6.301 30.1201 15.747l-14.861 8.532c-3.4503-4.724-8.8902-7.873-15.2591-7.873-10.2169.0-18.4434 8.398-18.4434 17.978.0 9.578 8.359 17.976 18.4434 17.976 6.6342.0 12.4724-3.411 15.6571-8.529l14.728 8.66c-6.236 9.843-17.5148 16.406-30.3851 16.406C65.7897 334.587 50 318.84 50 300.074z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <a
+                    href="https://www.netacad.com/courses/javascript-essentials-2"
+                    target="_blank" rel="noopener">
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">JavaScript Essentials 2</h5>
+                </a>
+                <div class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-300">12/12/2024</div>
+                <div class="mb-3 font-normal text-gray-500 dark:text-gray-400 prose">Khóa học "JavaScript Essentials 2" của Cisco đã giúp tôi hiểu sâu hơn về lập trình hướng đối tượng, 
+                    xử lý bất đồng bộ và cách làm việc với API. Tôi thấy kỹ năng lập trình của mình được cải thiện rõ rệt, 
+                    đồng thời tự tin hơn khi phát triển các ứng dụng web phức tạp. Đây là một hành trình học tập thú vị và 
+                    đầy giá trị.</div>
+                <img src="/assets/img/javascript2.png" alt="java2">
+                <a href="https://www.credly.com/badges/db37a92b-0560-431c-a0c7-5a68da7dcd8b" target="_blank"
+                rel="noopener"
+                class="inline-flex items-center text-primary-600 dark:text-primary-300 hover:underline">See
+                certificate
+                <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" fill="none"
+                    viewBox="0 0 18 18">
+                    <path stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11v4.833A1.166 1.166.0 0113.833 17H2.167A1.167 1.167.0 011 15.833V4.167A1.166 1.166.0 012.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778">
+                    </path>
+                </svg></a>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
