@@ -643,7 +643,7 @@ Bây giờ chúng ta sẽ viết mã để kích hoạt sự kiện máy khách 
       },500);
     }
 ```
-***QUAN TRỌNG*** : Khi chúng ta chạy mã này trong trình duyệt của mình, cập nhật trạng thái và làm mờ điều khiển trạng thái, chúng ta sẽ gặp lỗi trong bảng điều khiển JavaScript cho thư viện Pusher. Để khắc phục lỗi này, hãy vào bảng điều khiển tại trang web Pusher.com, vào cài đặt và bật gửi sự kiện trực tiếp từ máy khách.
+**QUAN TRỌNG** : Khi chúng ta chạy mã này trong trình duyệt của mình, cập nhật trạng thái và làm mờ điều khiển trạng thái, chúng ta sẽ gặp lỗi trong bảng điều khiển JavaScript cho thư viện Pusher. Để khắc phục lỗi này, hãy vào bảng điều khiển tại trang web Pusher.com, vào cài đặt và bật gửi sự kiện trực tiếp từ máy khách.
 ```JSON
 Pusher : Error : {
   "type":"WebSocketError",

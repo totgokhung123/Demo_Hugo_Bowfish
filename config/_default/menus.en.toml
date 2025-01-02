@@ -37,10 +37,10 @@
 #  pageRef = "categories/awesome"
 #  weight = 10
 
-[[main]]
-  name = "Tech/OpenShift"
-  pageRef = "posts/openshift"
-  weight = 20
+# [[main]]
+#   name = "Tech/OpenShift"
+#   pageRef = "posts/openshift"
+#   weight = 20
 
 [[main]]
   name = "Series"
